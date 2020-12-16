@@ -3,9 +3,12 @@
 /* 
 * Данный класс реализует паттерн Singleton,
 * король может быть один и только один.
+* Полиморфизм реализован с помощью интерфейсов.
+* Король может реализовывать различные интерфейсы(поведение),
+* но в тоже время всегда оставаться королем.
 */
 
-class King
+class King implements Blessable
 {
     protected static $instance;
     private $name;
@@ -45,5 +48,10 @@ class King
     {
         $class_name = get_class($this);
         echo "Hello! I'm a {$class_name}" . PHP_EOL;
+    }
+
+    public function give_a_blessing()
+    {
+        //Код для благословения
     }
 }
