@@ -19,6 +19,7 @@ echo get_class($prince2);
 
 $courtiers = [new Employee, new Driver];
 
+//В этом месте проявляется полиморфизм
 foreach($courtiers as $courtier) {
     $courtier->sayHello();
 }
